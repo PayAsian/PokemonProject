@@ -77,38 +77,68 @@ private void setupDropdown()
 			{
 				public void actionPerformed(ActionEvent selection)
 			});
-	this.addMouseListener(newActionListener)
+	
+	this.addMouseListener(new ActionListener()
 	{
-		public void mouseEntered(MouseEvent enterd)
+		public void mouseEntered(MouseEvent enterred)
 		{
-			
+			JOptionPane.showMessageDialog(baseController.getBaseFrame(), "The mouse entered the program");
 		}
 		
 		public void mouseReleased(MouseEvent released)
 		{
-			 
+			 System.out.println("released");
 		}
 		
 		public void mouseExited(MouseEvent exited)
 		{
-			
+			JOptionPane.showMessageDialog(baseController.getBaseFrame(), "The mouse exited the program");
 		}
 		
 		public void mouseClicked(MouseEvent clicked)
 		{
-			
+			System.out.println("clicked");
 		}
 		
 		public void mousePressed(MouseEvent pressed)
 		{
-			
+			System.out.println("pressed");
 		}
 		
-	}
+	});
 }
 
 private void setupListeners()
 {
+	
+	
+	
+	pokedexSelector.addActionListener(new ActionListener()
+			{
+				public void actionPerfromed(ActionEvent selection)
+				{
+				
+				int selected = pokexSelector.getSelectedindex();
+				nameField.setText(baseController.getPokedex().get(selected).getName());
+				numberField.setText(baseController.getPokedex().get(selected).getNumber() + "");
+				combatField.setText(baseController.getPokedex().get(selected).getAttackPoints() + "");
+				speedField.setText(baseController.getPokedex().get(selected).getSpeedPoints() + "");
+				healthField.setTest(baseController.getPokedex().get(selected).getHealthPoints);
+				advancedArea.setText(baseController.getPokedex().get(selected).getHealthPoints 
+						+ "\n\n" + baseController.getPokedex().get(selected).getPokemonTypes());
+				}
+			});
+	
+	updateButton.addActionListener(new ActionListener()
+			{
+				
+			});
+	
+	this.addMouseListener(new MouseListener()
+			{
+		
+			});	
+	
 	this.addMouseMotionListener(new MouseMotionListener()
 	{
 		public void mouseDragged(MouseEvent dragged)
