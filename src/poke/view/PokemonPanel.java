@@ -7,6 +7,11 @@ import javax.swing.*;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
+
+
 
 public class PokemonPanel extends JPanel
 {
@@ -68,12 +73,66 @@ private void setupLayout()
 
 private void setupDropdown()
 {
-	
+	pokedexSelctor.addActionListener(new ActionListener()
+			{
+				public void actionPerformed(ActionEvent selection)
+			});
+	this.addMouseListener(newActionListener)
+	{
+		public void mouseEntered(MouseEvent enterd)
+		{
+			
+		}
+		
+		public void mouseReleased(MouseEvent released)
+		{
+			 
+		}
+		
+		public void mouseExited(MouseEvent exited)
+		{
+			
+		}
+		
+		public void mouseClicked(MouseEvent clicked)
+		{
+			
+		}
+		
+		public void mousePressed(MouseEvent pressed)
+		{
+			
+		}
+		
+	}
 }
 
 private void setupListeners()
 {
+	this.addMouseMotionListener(new MouseMotionListener()
+	{
+		public void mouseDragged(MouseEvent dragged)
+		{
+			setRandomColor();
+		}
+			
+		public void mouseMoved(MouseEvent moved)
+		{
+			if((Math.abs(moved.getX() - updateButton.getX()) < 5) || (Math.abs(moved.getY() - updateButton.getY()) <5))
+				{
+					updateButton.setLocation(moved.getX() + 10, moved.getY() - 10 );
+				}
+		}
+	});
+}
+
+private void setRandomColor()
+{
+	int red = (int)(Math.random() * 256);
+	int green = (int)(Math.random() * 256);
+	int blue = (int)(Math.random() * 256);
 	
+	this.setBackground(new Color(red, green, blue));
 }
 
 private void changeColorBasedOnData(String data)
