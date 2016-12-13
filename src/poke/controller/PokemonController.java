@@ -1,6 +1,7 @@
 package poke.controller;
 
-import poke.model.*;
+import java.util.ArrayList;
+import poke.model.Pokemon;
 import poke.view.*;
 
 public class PokemonController
@@ -37,7 +38,7 @@ public class PokemonController
 		return pokedex;
 	}
 	
-	public PokemonFrame getBaseFrame()
+	public PokemonFrame getBaseFrame(PokemonFrame baseFrame)
 	{
 		return baseFrame;
 	}
