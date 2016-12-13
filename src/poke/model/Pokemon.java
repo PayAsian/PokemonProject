@@ -10,11 +10,23 @@ public abstract class Pokemon
 	private double speed;
 	private int number;
 	private String name;
+	private String buildPokemonList;
 	private ArrayList<Pokemon> Pokemon;
+	private ArrayList<Pokemon> pokedex;
+	
+	
 	
 	public Pokemon(String name, int number)
 	{
+		this.buildPokemonList = new String();
+		this.Pokemon = new ArrayList<Pokemon>();
+		this.pokedex = new ArrayList<Pokemon>();
 		
+	}
+	
+	public ArrayList<Pokemon> pokedex()
+	{
+		return pokedex;
 	}
 	
 	public String toString()
