@@ -33,7 +33,9 @@ public class PokemonPanel extends JPanel
 	private JTextField nameField;
 	private JTextField numberField;
 	private JTextArea advancedArea;
+	private JTextArea PokeDisplay;
 	
+	setupPokeDisplay();
 	setupPanel();
 	setupLayout();
 	setupListeners();
@@ -61,12 +63,39 @@ public PokemonPanel(PokemonController baseController)
 	
 }
 
-private void setupPanel()
+private void setupPokemonDisplay()
 {
+	PokeDisplay.setEditable(false);
+	PokeDisplay.setEnabled(false);
+	PokeDisplay.setLineWrap(true);
+	PokeDisplay.setWrapStyleWord(true);
 	
 }
 
-private void setupLayout()
+private void setupPokemonPanel()
+{
+	this.setLayout(baseLayout);
+	this.setBackground(Color.CYAN);
+	this.add(updateButton);
+	this.add(nameField);
+	this.add(speedField);
+	this.add(numberField);
+	this.add(advancedArea);
+	this.add(pokedexSelector);
+	this.add(advancedArea);
+	this.add(pokedexSelector);
+	this.add(advancedLabel);
+	this.add(combatLabel);
+	this.add(healthLabel);
+	this.add(speedLabel);
+	this.add(numberLabel);
+	this.add(nameLabel);
+	this.add(pokemonLabel);
+	this.add(PokeDisplay);
+	
+}
+
+private void setupPokemonLayout()
 {
 	
 }
@@ -75,7 +104,7 @@ private void setupDropdown()
 {
 	pokedexSelctor.addActionListener(new ActionListener()
 			{
-				public void actionPerformed(ActionEvent selection)
+				public void actionPerformed(ActionEvent selection);
 			});
 	
 	this.addMouseListener(new ActionListener()
@@ -108,7 +137,7 @@ private void setupDropdown()
 	});
 }
 
-private void setupListeners()
+private void setupPokemonListeners()
 {
 	
 	

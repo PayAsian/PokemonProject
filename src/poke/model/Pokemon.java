@@ -1,5 +1,7 @@
 package poke.model;
 
+import java.util.ArrayList;
+
 public abstract class Pokemon
 {
 
@@ -8,6 +10,7 @@ public abstract class Pokemon
 	private double speed;
 	private int number;
 	private String name;
+	private ArrayList<Pokemon> Pokemon;
 	
 	public Pokemon(String name, int number)
 	{

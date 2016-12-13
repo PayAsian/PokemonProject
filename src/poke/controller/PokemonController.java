@@ -1,6 +1,6 @@
 package poke.controller;
 
-import poke.model.Pokemon;
+import poke.model.*;
 import poke.view.*;
 
 public class PokemonController

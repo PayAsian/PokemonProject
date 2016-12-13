@@ -6,7 +6,8 @@ import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
 @SuiteClasses({ ControllerTest.class, FrameTest.class, PanelTest.class })
+
 public class AllTests
 {
-
+	
 }
