@@ -147,7 +147,7 @@ private void setupPokemonListeners()
 				public void actionPerfromed(ActionEvent selection)
 				{
 				
-				int selected = pokexSelector.getSelectedindex();
+				int selected = pokedexSelector.getSelectedIndex();
 				nameField.setText(baseController.getPokedex().get(selected).getName());
 				numberField.setText(baseController.getPokedex().get(selected).getNumber() + "");
 				combatField.setText(baseController.getPokedex().get(selected).getAttackPoints() + "");
